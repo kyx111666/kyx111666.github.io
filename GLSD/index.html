@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GLSD is a training-free decoder that combines global prominence and aligned local multi-scale saliency for long-video micro-expression spotting.">
+  <meta name="theme-color" content="#f4f5f2">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GLSD | Global-Local Saliency Decoding">
+  <meta property="og:description" content="A training-free candidate-level decoder for frozen temporal responses in long-video micro-expression spotting.">
+  <meta property="og:url" content="https://kyx111666.github.io/">
+  <meta property="og:image" content="https://kyx111666.github.io/GLSD/assets/figures/glsd-framework.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>GLSD | Global-Local Saliency Decoding</title>
+  <link rel="canonical" href="https://kyx111666.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="GLSD, back to top">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>GLSD</span>
+      </a>
+      <div class="nav-links">
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#resources">Resources</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="paper-title">
+      <div class="shell hero-copy">
+        <p class="kicker">Long-video micro-expression spotting</p>
+        <p class="project-mark" aria-hidden="true">GLSD</p>
+        <h1 id="paper-title">Global-Local Saliency Decoding for Micro-Expression Spotting in Long Videos</h1>
+
+        <div class="authors" aria-label="Authors">
+          <a href="mailto:xieky@mails.neu.edu.cn">Keying Xie<span title="Co-first author">*</span></a>
+          <span>Yuxin Jia<span title="Co-first author">*</span></span>
+          <span>Yijiang Zeng</span>
+          <a href="mailto:lanx@cse.neu.edu.cn">Xing Lan<span title="Corresponding author">#</span></a>
+          <span>Yinan Liu</span>
+          <span>Feiliang Ren</span>
+          <span>Chao Liang</span>
+        </div>
+        <p class="author-note"><span>* Co-first authors</span><span># Corresponding author</span></p>
+        <p class="affiliations">Northeastern University, Shenyang, China <span aria-hidden="true">&middot;</span> Wuhan University, Wuhan, China</p>
+
+        <p class="hero-summary">Decode candidate peaks by reading both the full response landscape and their aligned local structure across temporal scales.</p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#method">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+            Explore the method
+          </a>
+          <a class="button button-secondary" href="#results">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 16 4-5 4 3 5-7"/></svg>
+            View results
+          </a>
+        </div>
+
+        <ul class="hero-facts" aria-label="Method summary">
+          <li><strong>Training-free</strong><span>No learned decoder parameters</span></li>
+          <li><strong>Candidate-level</strong><span>Operates on frozen responses</span></li>
+          <li><strong>Pipeline-aware</strong><span>Preserves native event rules</span></li>
+        </ul>
+      </div>
+
+      <div class="figure-wrap shell" id="method">
+        <div class="figure-header">
+          <div>
+            <p class="section-label">Method overview</p>
+            <h2>One decoder, two structural cues</h2>
+          </div>
+          <a class="figure-link" href="assets/figures/glsd-framework.pdf" target="_blank" rel="noopener" title="Open the full-resolution method figure">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            Open figure
+          </a>
+        </div>
+        <a class="method-figure" href="assets/figures/glsd-framework.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution GLSD framework figure">
+          <img src="assets/figures/glsd-framework.png" width="2524" height="845" alt="GLSD framework: a frozen temporal response is smoothed at multiple scales, reference candidates receive global prominence and aligned local saliency scores, the scores are fused and thresholded, and selected candidates pass through each pipeline's native event interface.">
+        </a>
+        <p class="figure-caption">GLSD combines normalized global prominence with peak-aligned local multi-scale saliency, then returns retained candidates through each pipeline's native event-output rules.</p>
+      </div>
+    </section>
+
+    <section class="section abstract-section" id="abstract" aria-labelledby="abstract-title">
+      <div class="reading-column">
+        <p class="section-label">Abstract</p>
+        <h2 id="abstract-title">From temporal responses to discrete events</h2>
+        <p>Long-video micro-expression spotting requires continuous temporal responses to be decoded into discrete events, yet peak amplitude alone does not describe either a candidate&rsquo;s prominence relative to the response background or its local structure across scales. We propose the Global-Local Saliency Decoder (GLSD), a training-free candidate-level decoder with no learned parameters for frozen temporal responses. GLSD combines normalized global prominence with aligned local multi-scale saliency while retaining each pipeline&rsquo;s native event-output rules. On official temporal responses from ME-TST+ and BoostingVRME, GLSD yields higher pooled Spotting F1 point estimates in all four pipeline-dataset settings on SAMMLV and CAS(ME)<sup>3</sup>, with relative gains of 5.58% &ndash; 18.15% over Native decoding. BoostingVRME with GLSD reaches 0.3088 and 0.1152, respectively. The locked-parameter fusion ablation shows that the two structural cues contribute jointly to the GLSD decoder. Our code is public at <a href="https://kyx111666.github.io/">https://kyx111666.github.io</a>.</p>
+      </div>
+    </section>
+
+    <section class="section method-section" aria-labelledby="cues-title">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="section-label">Decoder design</p>
+          <h2 id="cues-title">Score structure, preserve geometry</h2>
+          <p>GLSD changes candidate selection. It does not replace the upstream response generator or each pipeline's event construction rules.</p>
+        </div>
+
+        <div class="cue-grid">
+          <article class="cue-item cue-global">
+            <span class="cue-symbol" aria-hidden="true">G</span>
+            <h3>Global prominence</h3>
+            <p>Measures how strongly a reference peak stands out in the full response landscape, normalized by the response range.</p>
+          </article>
+          <article class="cue-item cue-local">
+            <span class="cue-symbol" aria-hidden="true">L</span>
+            <h3>Aligned local saliency</h3>
+            <p>Matches nearby peaks across smoothing scales and aggregates bilateral local contrast for the same candidate.</p>
+          </article>
+          <article class="cue-item cue-interface">
+            <span class="cue-symbol" aria-hidden="true">A</span>
+            <h3>Native event interface</h3>
+            <p>Retains ME-TST+'s fixed windows and BoostingVRME's native boundaries, ordering, and conflict handling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section" id="results" aria-labelledby="results-title">
+      <div class="shell">
+        <div class="results-heading">
+          <div>
+            <p class="section-label">Main results</p>
+            <h2 id="results-title">Higher pooled Spotting F1 in all four settings</h2>
+          </div>
+          <p>Native decoding and GLSD are evaluated on identical official temporal responses, with the same temporal units and pipeline-specific event rules.</p>
+        </div>
+
+        <div class="legend" aria-label="Chart legend"><span class="legend-native">Native</span><span class="legend-glsd">GLSD</span></div>
+        <div class="result-grid">
+          <article class="result-item">
+            <div class="result-title"><div><span>SAMMLV</span><h3>ME-TST+</h3></div><strong>+5.58%</strong></div>
+            <div class="metric-row"><span>Native</span><div class="bar-track"><i class="bar native" style="--bar-width:85.1%"></i></div><b>0.2723</b></div>
+            <div class="metric-row"><span>GLSD</span><div class="bar-track"><i class="bar glsd" style="--bar-width:89.8%"></i></div><b>0.2875</b></div>
+          </article>
+          <article class="result-item">
+            <div class="result-title"><div><span>SAMMLV</span><h3>BoostingVRME</h3></div><strong>+6.26%</strong></div>
+            <div class="metric-row"><span>Native</span><div class="bar-track"><i class="bar native" style="--bar-width:90.8%"></i></div><b>0.2906</b></div>
+            <div class="metric-row"><span>GLSD</span><div class="bar-track"><i class="bar glsd" style="--bar-width:96.5%"></i></div><b>0.3088</b></div>
+          </article>
+          <article class="result-item">
+            <div class="result-title"><div><span>CAS(ME)<sup>3</sup></span><h3>ME-TST+</h3></div><strong>+7.12%</strong></div>
+            <div class="metric-row"><span>Native</span><div class="bar-track"><i class="bar native" style="--bar-width:28.5%"></i></div><b>0.0912</b></div>
+            <div class="metric-row"><span>GLSD</span><div class="bar-track"><i class="bar glsd" style="--bar-width:30.6%"></i></div><b>0.0978</b></div>
+          </article>
+          <article class="result-item">
+            <div class="result-title"><div><span>CAS(ME)<sup>3</sup></span><h3>BoostingVRME</h3></div><strong>+18.15%</strong></div>
+            <div class="metric-row"><span>Native</span><div class="bar-track"><i class="bar native" style="--bar-width:30.5%"></i></div><b>0.0975</b></div>
+            <div class="metric-row"><span>GLSD</span><div class="bar-track"><i class="bar glsd" style="--bar-width:36%"></i></div><b>0.1152</b></div>
+          </article>
+        </div>
+
+        <table class="sr-only">
+          <caption>Pooled Spotting F1 results on official temporal responses</caption>
+          <thead><tr><th>Dataset</th><th>Pipeline</th><th>Native</th><th>GLSD</th><th>Relative gain</th></tr></thead>
+          <tbody>
+            <tr><td>SAMMLV</td><td>ME-TST+</td><td>0.2723</td><td>0.2875</td><td>5.58%</td></tr>
+            <tr><td>SAMMLV</td><td>BoostingVRME</td><td>0.2906</td><td>0.3088</td><td>6.26%</td></tr>
+            <tr><td>CAS(ME)3</td><td>ME-TST+</td><td>0.0912</td><td>0.0978</td><td>7.12%</td></tr>
+            <tr><td>CAS(ME)3</td><td>BoostingVRME</td><td>0.0975</td><td>0.1152</td><td>18.15%</td></tr>
+          </tbody>
+        </table>
+
+        <div class="result-notes">
+          <p><strong>Robust around the operating point.</strong> Perturbing the selected threshold by +/-0.05 changes Spotting F1 by at most 0.011 in every setting.</p>
+          <p><strong>Lightweight decoding.</strong> Additional decoding time is 1.16-4.82 ms per video, excluding backbone inference, cache I/O, and offline configuration selection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section qualitative-section" aria-labelledby="qualitative-title">
+      <div class="shell">
+        <div class="section-heading compact-heading">
+          <p class="section-label">Candidate-level examples</p>
+          <h2 id="qualitative-title">Suppress false positives, recover missed events</h2>
+        </div>
+        <figure class="qualitative-figure">
+          <img loading="lazy" src="assets/figures/glsd-qualitative.png" width="1297" height="531" alt="Two qualitative response examples. In the first, GLSD removes a Native false positive. In the second, GLSD recovers a ground-truth event missed by Native decoding.">
+          <figcaption>Two real official-response cases. Local cross-scale evidence suppresses a Native false positive, while joint global-local evidence retains a Native-missed ground-truth event.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section resources-section" id="resources" aria-labelledby="resources-title">
+      <div class="shell resources-layout">
+        <div>
+          <p class="section-label">Resources</p>
+          <h2 id="resources-title">Project materials</h2>
+          <p>The page structure is stable while the manuscript's Introduction and Related Work continue to evolve.</p>
+        </div>
+        <div class="resource-list">
+          <div class="resource-item unavailable" aria-label="Paper PDF, release pending">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+            <div><strong>Paper</strong><span>Final PDF link will be added after release.</span></div>
+            <span class="resource-status">Pending</span>
+          </div>
+          <div class="resource-item unavailable" aria-label="Source code, release pending">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6M14.5 4l-5 16"/></svg>
+            <div><strong>Code</strong><span>Public implementation link will be added here.</span></div>
+            <span class="resource-status">Pending</span>
+          </div>
+          <a class="resource-item" href="assets/figures/glsd-framework.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
+            <div><strong>Method figure</strong><span>Open the final vector PDF.</span></div>
+            <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div><strong>GLSD</strong><span>Global-Local Saliency Decoding</span></div>
+      <p>Keying Xie, Yuxin Jia, Yijiang Zeng, Xing Lan, Yinan Liu, Feiliang Ren, and Chao Liang.</p>
+    </div>
+  </footer>
+</body>
+</html>
