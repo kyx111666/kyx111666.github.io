@@ -132,15 +132,15 @@
         <div class="results-heading">
           <div>
             <p class="section-label">Main results</p>
-            <h2 id="results-title">GLSD improves Spotting F1 in all four settings</h2>
+            <h2 id="results-title">GLSD raises Spotting F1 by 5.58–18.15%</h2>
           </div>
-          <p>Each row compares the same official response with the same native event rules. Read from left to right: Native score, GLSD score, absolute change, then relative gain.</p>
+          <p>Across all four settings, GLSD improves the same official responses under the same native event rules. The headline result is the relative improvement; absolute F1 change remains available for reference.</p>
         </div>
 
         <div class="results-proof" aria-label="Results summary">
           <div><strong>4 / 4</strong><span>settings improved</span></div>
-          <div><strong>+0.0066–0.0182</strong><span>absolute F1 gain</span></div>
-          <div><strong>+5.58–18.15%</strong><span>relative F1 gain</span></div>
+          <div class="results-proof-primary"><strong>+5.58–18.15%</strong><span>relative F1 improvement</span></div>
+          <div><strong>+0.0066–0.0182</strong><span>absolute F1 change</span></div>
         </div>
 
         <div class="result-grid">
@@ -195,13 +195,13 @@
         </div>
 
         <table class="results-table">
-          <caption>Pooled Spotting F1 on official temporal responses. Higher is better.</caption>
-          <thead><tr><th>Dataset</th><th>Pipeline</th><th>Native</th><th>GLSD</th><th>Absolute gain</th><th>Relative gain</th></tr></thead>
+          <caption>Pooled Spotting F1 on official temporal responses. Relative improvement is the percentage change from Native to GLSD.</caption>
+          <thead><tr><th>Dataset</th><th>Pipeline</th><th>Native</th><th>GLSD</th><th>Relative improvement</th><th>Absolute Δ F1</th></tr></thead>
           <tbody>
-            <tr><td>SAMMLV</td><td>ME-TST+</td><td>0.2723</td><td>0.2875</td><td>0.0152</td><td>5.58%</td></tr>
-            <tr><td>SAMMLV</td><td>BoostingVRME</td><td>0.2906</td><td>0.3088</td><td>0.0182</td><td>6.26%</td></tr>
-            <tr><td>CAS(ME)3</td><td>ME-TST+</td><td>0.0912</td><td>0.0978</td><td>0.0066</td><td>7.12%</td></tr>
-            <tr><td>CAS(ME)3</td><td>BoostingVRME</td><td>0.0975</td><td>0.1152</td><td>0.0177</td><td>18.15%</td></tr>
+            <tr><td>SAMMLV</td><td>ME-TST+</td><td>0.2723</td><td>0.2875</td><td>5.58%</td><td>+0.0152</td></tr>
+            <tr><td>SAMMLV</td><td>BoostingVRME</td><td>0.2906</td><td>0.3088</td><td>6.26%</td><td>+0.0182</td></tr>
+            <tr><td>CAS(ME)3</td><td>ME-TST+</td><td>0.0912</td><td>0.0978</td><td>7.12%</td><td>+0.0066</td></tr>
+            <tr><td>CAS(ME)3</td><td>BoostingVRME</td><td>0.0975</td><td>0.1152</td><td>18.15%</td><td>+0.0177</td></tr>
           </tbody>
         </table>
 
