@@ -702,14 +702,38 @@ img {
   margin-bottom: 0;
 }
 
+.qualitative-figure-link {
+  display: block;
+  text-decoration: none;
+}
+
+.qualitative-pdf {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 41vw, 500px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
 .qualitative-figure img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1297 / 531;
+  aspect-ratio: 4323 / 1770;
   object-fit: contain;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 6px;
+}
+
+.figure-pdf-link {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+.figure-pdf-link a {
+  color: var(--accent-strong);
+  font-weight: 700;
 }
 
 .qualitative-figure figcaption {

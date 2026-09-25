@@ -95,7 +95,7 @@
       <div class="reading-column">
         <p class="section-label">Abstract</p>
         <h2 id="abstract-title">From temporal responses to discrete events</h2>
-        <p>Long-video micro-expression spotting requires continuous temporal responses to be decoded into discrete events, yet peak amplitude alone does not describe either a candidate&rsquo;s prominence relative to the response background or its local structure across scales. We propose the Global-Local Saliency Decoder (GLSD), a training-free candidate-level decoder with no learned parameters for frozen temporal responses. GLSD combines normalized global prominence with aligned local multi-scale saliency while retaining each pipeline&rsquo;s native event-output rules. On official temporal responses from ME-TST+ and BoostingVRME, GLSD yields higher pooled Spotting F1 point estimates in all four pipeline-dataset settings on SAMMLV and CAS(ME)<sup>3</sup>, with relative gains of 5.58% &ndash; 18.15% over Native decoding. BoostingVRME with GLSD reaches 0.3088 and 0.1152, respectively. The locked-parameter fusion ablation shows that the two structural cues contribute jointly to the GLSD decoder. Our code is public at <a href="https://kyx111666.github.io/">https://kyx111666.github.io</a>.</p>
+        <p>Long-video micro-expression spotting requires continuous temporal responses to be decoded into discrete events, yet peak amplitude alone does not describe either a candidate&rsquo;s prominence relative to the response background or its local structure across scales. We propose the Global-Local Saliency Decoder (GLSD), a training-free candidate-level decoder with no learned parameters for frozen temporal responses. GLSD combines normalized global prominence with aligned local multi-scale saliency while retaining each pipeline&rsquo;s native event-output rules. On official temporal responses from ME-TST+ and BoostingVRME, GLSD yields higher pooled Spotting F1 point estimates in all four pipeline-dataset settings on SAMMLV and CAS(ME)<sup>3</sup>, with relative gains of 5.58% &ndash; 18.15% over Native decoding. BoostingVRME with GLSD reaches 0.3088 and 0.1152, respectively. The locked-parameter fusion ablation shows that the two structural cues contribute jointly to the GLSD decoder. The organized source package is available in the Code resource below.</p>
       </div>
     </section>
 
@@ -186,7 +186,12 @@
           <h2 id="qualitative-title">Suppress false positives, recover missed events</h2>
         </div>
         <figure class="qualitative-figure">
-          <img loading="lazy" src="assets/figures/glsd-qualitative.png" width="1297" height="531" alt="Two qualitative response examples. In the first, GLSD removes a Native false positive. In the second, GLSD recovers a ground-truth event missed by Native decoding.">
+          <object class="qualitative-pdf" data="assets/figures/glsd-qualitative.pdf#view=FitH&amp;toolbar=0&amp;navpanes=0" type="application/pdf" aria-label="Fig. 2 qualitative examples in PDF format">
+            <a class="qualitative-figure-link" href="assets/figures/glsd-qualitative.pdf" target="_blank" rel="noopener" aria-label="Open the full-resolution qualitative figure PDF">
+              <img loading="lazy" src="assets/figures/glsd-qualitative.png" width="4323" height="1770" alt="Two qualitative response examples. In the first, GLSD removes a Native false positive. In the second, GLSD recovers a ground-truth event missed by Native decoding.">
+            </a>
+          </object>
+          <p class="figure-pdf-link"><a href="assets/figures/glsd-qualitative.pdf" target="_blank" rel="noopener">Open Fig. 2 as PDF</a></p>
           <figcaption>Two real official-response cases. Local cross-scale evidence suppresses a Native false positive, while joint global-local evidence retains a Native-missed ground-truth event.</figcaption>
         </figure>
       </div>
@@ -200,16 +205,16 @@
           <p>The page structure is stable while the manuscript's Introduction and Related Work continue to evolve.</p>
         </div>
         <div class="resource-list">
-          <div class="resource-item unavailable" aria-label="Paper PDF, release pending">
+          <a class="resource-item" href="assets/figures/glsd-paper.pdf" target="_blank" rel="noopener" aria-label="Open the paper PDF">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
-            <div><strong>Paper</strong><span>Final PDF link will be added after release.</span></div>
-            <span class="resource-status">Pending</span>
-          </div>
-          <div class="resource-item unavailable" aria-label="Source code, release pending">
+            <div><strong>Paper</strong><span>Download the final paper PDF.</span></div>
+            <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="resource-item" href="assets/GLSD-experiments-github.zip" download aria-label="Download the GLSD experiment source package">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6M14.5 4l-5 16"/></svg>
-            <div><strong>Code</strong><span>Public implementation link will be added here.</span></div>
-            <span class="resource-status">Pending</span>
-          </div>
+            <div><strong>Code</strong><span>Download the organized experiment source package.</span></div>
+            <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
           <a class="resource-item" href="assets/figures/glsd-framework.pdf" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
             <div><strong>Method figure</strong><span>Open the final vector PDF.</span></div>
