@@ -826,11 +826,6 @@ img {
   margin-bottom: 0;
 }
 
-.qualitative-figure-link {
-  display: block;
-  text-decoration: none;
-}
-
 .qualitative-figure img {
   width: 100%;
   height: auto;
@@ -839,10 +834,6 @@ img {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 6px;
-}
-
-.qualitative-figure-link:hover img {
-  border-color: var(--ink-soft);
 }
 
 .qualitative-figure figcaption {
@@ -854,12 +845,6 @@ img {
 
 .qualitative-figure figcaption strong {
   color: var(--ink);
-}
-
-.qualitative-figure figcaption a {
-  margin-left: 6px;
-  color: var(--blue-dark);
-  font-weight: 700;
 }
 
 .resources-section {
