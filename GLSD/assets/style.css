@@ -1016,6 +1016,76 @@ img {
   font-size: 13px;
 }
 
+.paper-comparison-wrap {
+  overflow-x: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 10px 26px rgba(24, 38, 50, 0.06);
+}
+
+.paper-comparison-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  color: var(--ink);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.paper-comparison-table caption {
+  padding: 16px 18px 12px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  text-align: left;
+}
+
+.paper-comparison-table th {
+  padding: 12px 16px;
+  background: #eef1f2;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.paper-comparison-table td {
+  padding: 9px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.paper-comparison-table th:nth-child(n + 3),
+.paper-comparison-table td {
+  text-align: right;
+}
+
+.paper-comparison-table .method-name {
+  text-align: left;
+}
+
+.paper-comparison-table .system-type {
+  color: var(--ink-soft);
+  font-weight: 800;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.paper-comparison-table .group-start td {
+  border-top: 2px solid #aeb6bc;
+}
+
+.paper-comparison-table .ours-row td:not(.system-type) {
+  background: #f3f5f5;
+  font-style: italic;
+}
+
+.paper-comparison-table .ours-row-best td:not(.system-type) {
+  background: #edf5ef;
+  font-weight: 800;
+}
+
 .resources-layout {
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
@@ -1589,12 +1659,10 @@ a.resource-item:hover {
   }
 
   .results-table td:nth-child(1)::before { content: "Dataset"; }
-  .results-table td:nth-child(2)::before { content: "Pipeline"; }
+  .results-table td:nth-child(2)::before { content: "Method"; }
   .results-table td:nth-child(3)::before { content: "Native"; }
-  .results-table td:nth-child(4)::before { content: "GLSD-90"; }
-  .results-table td:nth-child(5)::before { content: "Approx. relative"; }
-  .results-table td:nth-child(6)::before { content: "Δ F1"; }
-  .results-table td:nth-child(7)::before { content: "95% CI"; }
+  .results-table td:nth-child(4)::before { content: "GLSD"; }
+  .results-table td:nth-child(5)::before { content: "Relative gain"; }
 
   .results-table tbody td:nth-child(5) {
     margin-inline: -8px;
