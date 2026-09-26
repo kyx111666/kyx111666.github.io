@@ -947,6 +947,33 @@ img {
   border-top: 1px solid var(--line);
 }
 
+.citation-section {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+.citation-column {
+  width: min(900px, calc(100% - 48px));
+}
+
+.citation-column h2 {
+  margin-bottom: 18px;
+}
+
+.citation-block {
+  margin: 0;
+  padding: 22px 24px;
+  overflow-x: auto;
+  background: #f7f8f7;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  tab-size: 2;
+}
+
 .resources-layout {
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
@@ -1083,7 +1110,8 @@ a.resource-item:hover {
 
 @media (max-width: 700px) {
   .shell,
-  .reading-column {
+  .reading-column,
+  .citation-column {
     width: calc(100% - 32px);
   }
 
