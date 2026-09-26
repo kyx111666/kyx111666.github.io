@@ -130,99 +130,89 @@
         <div class="results-heading">
           <div>
             <p class="section-label">Main results</p>
-            <h2 id="results-title">GLSD raises Spotting F1 by 5.58–18.15%</h2>
+            <h2 id="results-title">GLSD improves Raw Spotting F1 in all four settings</h2>
           </div>
-          <p>Across all four settings, GLSD improves the same official responses under the same native event rules. The headline result is the relative improvement; absolute F1 change remains available for reference.</p>
+          <p>These are the fixed-response results reported in Table 1 of the paper. GLSD-90 improves every pipeline–dataset setting under the same native event rules.</p>
         </div>
 
         <div class="results-proof" aria-label="Results summary">
           <div><strong>4 / 4</strong><span>settings improved</span></div>
-          <div class="results-proof-primary"><strong>+5.58–18.15%</strong><span>relative F1 improvement</span></div>
-          <div><strong>+0.0066–0.0182</strong><span>absolute F1 change</span></div>
+          <div class="results-proof-primary"><strong>~2.2–7.7%</strong><span>relative F1 improvement</span></div>
+          <div><strong>+0.0062–0.0206</strong><span>absolute Δ F1</span></div>
         </div>
 
         <div class="result-grid">
-          <article class="result-item" aria-label="SAMMLV with ME-TST+: Native 0.2723, GLSD 0.2875, relative gain 5.58 percent">
+          <article class="result-item" aria-label="SAMMLV with ME-TST+: Native 0.2677, GLSD-90 0.2883, relative gain about 7.7 percent">
             <div class="result-title"><div><span>SAMMLV</span><h3>ME-TST+</h3></div><span class="gain-label">Relative gain</span></div>
-            <div class="gain-hero"><strong>+5.58%</strong><span>Spotting F1</span></div>
+            <div class="gain-hero"><strong>+7.7%</strong><span>Spotting F1</span></div>
             <div class="score-shift">
-              <div class="score-point score-native"><span>Native</span><b>0.2723</b></div>
+              <div class="score-point score-native"><span>Native</span><b>0.2677</b></div>
               <div class="score-arrow" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-              <div class="score-point score-glsd"><span>GLSD</span><b>0.2875</b></div>
+              <div class="score-point score-glsd"><span>GLSD-90</span><b>0.2883</b></div>
             </div>
-            <div class="uplift-head"><span>Relative uplift</span><b>+0.0152 absolute F1</b></div>
+            <div class="uplift-head"><span>Relative uplift</span><b>+0.0206 absolute F1</b></div>
             <div class="uplift-track" aria-hidden="true"><i style="--gain-width:27.9%"></i></div>
             <div class="uplift-axis" aria-hidden="true"><span>0%</span><span>20%</span></div>
           </article>
-          <article class="result-item" aria-label="SAMMLV with BoostingVRME: Native 0.2906, GLSD 0.3088, relative gain 6.26 percent">
-            <div class="result-title"><div><span>SAMMLV</span><h3>BoostingVRME</h3></div><span class="gain-label">Relative gain</span></div>
-            <div class="gain-hero"><strong>+6.26%</strong><span>Spotting F1</span></div>
+          <article class="result-item" aria-label="CAS(ME)3 with ME-TST+: Native 0.0875, GLSD-90 0.0942, relative gain about 7.5 percent">
+            <div class="result-title"><div><span>CAS(ME)<sup>3</sup></span><h3>ME-TST+</h3></div><span class="gain-label">Relative gain</span></div>
+            <div class="gain-hero"><strong>+7.5%</strong><span>Spotting F1</span></div>
             <div class="score-shift">
-              <div class="score-point score-native"><span>Native</span><b>0.2906</b></div>
+              <div class="score-point score-native"><span>Native</span><b>0.0875</b></div>
               <div class="score-arrow" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-              <div class="score-point score-glsd"><span>GLSD</span><b>0.3088</b></div>
+              <div class="score-point score-glsd"><span>GLSD-90</span><b>0.0942</b></div>
             </div>
-            <div class="uplift-head"><span>Relative uplift</span><b>+0.0182 absolute F1</b></div>
+            <div class="uplift-head"><span>Relative uplift</span><b>+0.0066 absolute F1</b></div>
+            <div class="uplift-track" aria-hidden="true"><i style="--gain-width:27.9%"></i></div>
+            <div class="uplift-axis" aria-hidden="true"><span>0%</span><span>20%</span></div>
+          </article>
+          <article class="result-item" aria-label="SAMMLV with BoostingVRME: Native 0.2776, GLSD-90 0.2838, relative gain about 2.2 percent">
+            <div class="result-title"><div><span>SAMMLV</span><h3>BoostingVRME</h3></div><span class="gain-label">Relative gain</span></div>
+            <div class="gain-hero"><strong>+2.2%</strong><span>Spotting F1</span></div>
+            <div class="score-shift">
+              <div class="score-point score-native"><span>Native</span><b>0.2776</b></div>
+              <div class="score-arrow" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+              <div class="score-point score-glsd"><span>GLSD-90</span><b>0.2838</b></div>
+            </div>
+            <div class="uplift-head"><span>Relative uplift</span><b>+0.0062 absolute F1</b></div>
             <div class="uplift-track" aria-hidden="true"><i style="--gain-width:31.3%"></i></div>
             <div class="uplift-axis" aria-hidden="true"><span>0%</span><span>20%</span></div>
           </article>
-          <article class="result-item" aria-label="CAS(ME)3 with ME-TST+: Native 0.0912, GLSD 0.0978, relative gain 7.12 percent">
-            <div class="result-title"><div><span>CAS(ME)<sup>3</sup></span><h3>ME-TST+</h3></div><span class="gain-label">Relative gain</span></div>
-            <div class="gain-hero"><strong>+7.12%</strong><span>Spotting F1</span></div>
-            <div class="score-shift">
-              <div class="score-point score-native"><span>Native</span><b>0.0912</b></div>
-              <div class="score-arrow" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-              <div class="score-point score-glsd"><span>GLSD</span><b>0.0978</b></div>
-            </div>
-            <div class="uplift-head"><span>Relative uplift</span><b>+0.0066 absolute F1</b></div>
-            <div class="uplift-track" aria-hidden="true"><i style="--gain-width:35.6%"></i></div>
-            <div class="uplift-axis" aria-hidden="true"><span>0%</span><span>20%</span></div>
-          </article>
-          <article class="result-item result-item-best" aria-label="CAS(ME)3 with BoostingVRME: Native 0.0975, GLSD 0.1152, relative gain 18.15 percent, the largest gain">
+          <article class="result-item result-item-best" aria-label="CAS(ME)3 with BoostingVRME: Native 0.1051, GLSD-90 0.1129, relative gain about 7.3 percent">
             <div class="result-title"><div><span>CAS(ME)<sup>3</sup></span><h3>BoostingVRME</h3></div><span class="gain-label">Largest gain</span></div>
-            <div class="gain-hero"><strong>+18.15%</strong><span>Spotting F1</span></div>
+            <div class="gain-hero"><strong>+7.3%</strong><span>Spotting F1</span></div>
             <div class="score-shift">
-              <div class="score-point score-native"><span>Native</span><b>0.0975</b></div>
+              <div class="score-point score-native"><span>Native</span><b>0.1051</b></div>
               <div class="score-arrow" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-              <div class="score-point score-glsd"><span>GLSD</span><b>0.1152</b></div>
+              <div class="score-point score-glsd"><span>GLSD-90</span><b>0.1129</b></div>
             </div>
-            <div class="uplift-head"><span>Relative uplift</span><b>+0.0177 absolute F1</b></div>
+            <div class="uplift-head"><span>Relative uplift</span><b>+0.0077 absolute F1</b></div>
             <div class="uplift-track" aria-hidden="true"><i style="--gain-width:90.8%"></i></div>
             <div class="uplift-axis" aria-hidden="true"><span>0%</span><span>20%</span></div>
           </article>
         </div>
 
         <table class="results-table">
-          <caption>Pooled Spotting F1 on official temporal responses. Relative improvement is the percentage change from Native to GLSD.</caption>
-          <thead><tr><th>Dataset</th><th>Pipeline</th><th>Native</th><th>GLSD</th><th>Relative improvement</th><th>Absolute Δ F1</th></tr></thead>
+          <caption>Raw Spotting F1 on fixed responses, matching Table 1 in the paper. Relative change is approximate because it is computed from the displayed rounded scores.</caption>
+          <thead><tr><th>Dataset</th><th>Pipeline</th><th>Native</th><th>GLSD-90</th><th>Approx. relative</th><th>Δ F1</th><th>95% CI</th></tr></thead>
           <tbody>
-            <tr><td>SAMMLV</td><td>ME-TST+</td><td>0.2723</td><td>0.2875</td><td>5.58%</td><td>+0.0152</td></tr>
-            <tr><td>SAMMLV</td><td>BoostingVRME</td><td>0.2906</td><td>0.3088</td><td>6.26%</td><td>+0.0182</td></tr>
-            <tr><td>CAS(ME)3</td><td>ME-TST+</td><td>0.0912</td><td>0.0978</td><td>7.12%</td><td>+0.0066</td></tr>
-            <tr><td>CAS(ME)3</td><td>BoostingVRME</td><td>0.0975</td><td>0.1152</td><td>18.15%</td><td>+0.0177</td></tr>
+            <tr><td>SAMMLV</td><td>ME-TST+</td><td>0.2677</td><td>0.2883</td><td>7.7%</td><td>+0.0206</td><td>[-0.0083, 0.0453]</td></tr>
+            <tr><td>CAS(ME)3</td><td>ME-TST+</td><td>0.0875</td><td>0.0942</td><td>7.5%</td><td>+0.0066</td><td>[-0.0093, 0.0228]</td></tr>
+            <tr><td>SAMMLV</td><td>BoostingVRME</td><td>0.2776</td><td>0.2838</td><td>2.2%</td><td>+0.0062</td><td>[-0.0248, 0.0379]</td></tr>
+            <tr><td>CAS(ME)3</td><td>BoostingVRME</td><td>0.1051</td><td>0.1129</td><td>7.3%</td><td>+0.0077</td><td>[-0.0045, 0.0190]</td></tr>
           </tbody>
         </table>
 
-        <div class="context-results">
-          <div class="context-results-heading">
-            <p class="section-label">Published-system context</p>
-            <h3>Comparison with published long-video systems</h3>
-            <p>Published values are shown in their original evaluation settings. This table provides context for the ME-TST+ integration; the matched fixed-response comparison above isolates the decoder change.</p>
+        <div class="published-comparison">
+          <div class="published-comparison-heading">
+            <p class="section-label">Published comparison</p>
+            <h3>Paper Table 2: Published-system comparison</h3>
+            <p>This is the comparison table from the submitted paper, reproduced as a figure in the same way as the MIME project page. Published values retain their original evaluation settings.</p>
           </div>
-          <div class="context-table-wrap">
-            <table class="context-table">
-              <caption>Published-system context. C/S denote CAS(ME)<sup>3</sup> and SAMMLV; Spot is Raw Spotting F1 and STRS is the joint spotting–recognition score.</caption>
-              <thead><tr><th>Method</th><th>C-STRS</th><th>C-Spot</th><th>S-STRS</th><th>S-Spot</th></tr></thead>
-              <tbody>
-                <tr><td>MEAN</td><td>0.0100</td><td>0.0283</td><td>0.0499</td><td>0.0949</td></tr>
-                <tr><td>SFAMNet</td><td>0.0331</td><td>0.0716</td><td>—</td><td>—</td></tr>
-                <tr><td>ME-TST</td><td>0.0387</td><td>0.0802</td><td>0.1356</td><td>0.2167</td></tr>
-                <tr><td>ME-TST+</td><td>0.0487</td><td>0.0912</td><td>0.1848</td><td>0.2723</td></tr>
-                <tr><td>BoostingVRME</td><td>0.0562</td><td>0.0997</td><td>0.2000</td><td>0.2906</td></tr>
-                <tr class="context-highlight"><td>ME-TST+ + GLSD</td><td>0.0506</td><td>0.0942</td><td>0.2000</td><td>0.2883</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <figure class="paper-table-figure">
+            <img src="assets/figures/table-published-systems.png" width="1041" height="732" loading="lazy" alt="Paper Table 2. Published-system comparison for MEAN, SFAMNet, ME-TST, ME-TST+, BoostingVRME, and ME-TST+ plus GLSD across C-STRS, C-Spot, S-STRS, and S-Spot.">
+            <figcaption>Exact values and citation markers from Table 2 of the paper. The fixed-response decoder comparison above isolates the GLSD change.</figcaption>
+          </figure>
         </div>
 
         <div class="result-notes">
@@ -272,16 +262,14 @@
       </div>
     </section>
 
-    <section class="section citation-section" aria-labelledby="citation-title">
+    <section class="section citation-section" id="BibTeX" aria-labelledby="citation-title">
       <div class="reading-column citation-column">
-        <p class="section-label">Citation</p>
         <h2 id="citation-title">BibTeX</h2>
         <pre class="citation-block"><code>@misc{glsd2026,
-  author       = {Xie, Keying and Jia, Yuxin and Zeng, Yijiang and Lan, Xing and Liu, Yinan and Ren, Feiliang and Liang, Chao},
-  title        = {Global-Local Saliency Decoding for Micro-Expression Spotting in Long Videos},
-  year         = {2026},
-  howpublished = {\url{https://kyx111666.github.io/GLSD/}},
-  note         = {Project page}
+  title  = {Global-Local Saliency Decoding for Micro-Expression Spotting in Long Videos},
+  author = {Keying Xie and Yuxin Jia and Yijiang Zeng and Xing Lan and Yinan Liu and Feiliang Ren and Chao Liang},
+  year   = {2026},
+  url    = {https://kyx111666.github.io/GLSD/}
 }</code></pre>
       </div>
     </section>
