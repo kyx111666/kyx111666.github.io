@@ -947,6 +947,72 @@ img {
   border-top: 1px solid var(--line);
 }
 
+.repository-section {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+.repository-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+  align-items: start;
+  gap: 52px;
+}
+
+.repository-heading {
+  max-width: 360px;
+}
+
+.repository-heading h2 {
+  margin-bottom: 14px;
+}
+
+.repository-heading > p:not(.section-label) {
+  margin-bottom: 22px;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+.repository-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue-dark);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.repository-link svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.repository-tree-wrap {
+  min-width: 0;
+  padding: 28px 32px;
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.repository-tree {
+  margin: 0;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+  line-height: 1.78;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 2;
+}
+
 .citation-section {
   background: var(--canvas);
   border-top: 0;
@@ -1210,12 +1276,17 @@ a.resource-item:hover {
   }
 
   .results-heading,
-  .resources-layout {
+  .resources-layout,
+  .repository-layout {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
   .results-heading > p {
+    max-width: 690px;
+  }
+
+  .repository-heading {
     max-width: 690px;
   }
 }
@@ -1240,7 +1311,8 @@ a.resource-item:hover {
   }
 
   .nav-links a:nth-child(3),
-  .nav-links a:nth-child(4) {
+  .nav-links a:nth-child(4),
+  .nav-links a:nth-child(5) {
     display: none;
   }
 
@@ -1290,6 +1362,15 @@ a.resource-item:hover {
   .hero-facts li + li {
     border-left: 0;
     border-top: 1px solid var(--line);
+  }
+
+  .repository-tree-wrap {
+    padding: 22px 18px;
+  }
+
+  .repository-tree {
+    font-size: 12px;
+    line-height: 1.7;
   }
 
   .figure-wrap {
@@ -1356,7 +1437,8 @@ a.resource-item:hover {
 
   .nav-links a:nth-child(1),
   .nav-links a:nth-child(3),
-  .nav-links a:nth-child(4) {
+  .nav-links a:nth-child(4),
+  .nav-links a:nth-child(5) {
     display: none;
   }
 
