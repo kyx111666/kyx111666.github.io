@@ -447,7 +447,9 @@ img {
 }
 
 .abstract-section h2 {
-  max-width: 650px;
+  max-width: none;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
 }
 
 .abstract-section p:not(.section-label) {
@@ -555,13 +557,13 @@ img {
 .results-heading {
   margin-bottom: 28px;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 64px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+  gap: 48px;
   align-items: end;
 }
 
 .results-heading h2 {
-  max-width: 700px;
+  max-width: none;
   margin-bottom: 0;
 }
 
@@ -915,6 +917,10 @@ img {
 
 .compact-heading {
   margin-bottom: 24px;
+}
+
+.qualitative-section .compact-heading {
+  max-width: none;
 }
 
 .qualitative-figure {
