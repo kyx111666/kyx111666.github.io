@@ -557,8 +557,8 @@ img {
 .results-heading {
   margin-bottom: 28px;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(380px, 0.8fr);
+  gap: 56px;
   align-items: end;
 }
 
@@ -1265,6 +1265,11 @@ a.resource-item:hover {
   max-width: 620px;
   margin: 0;
   text-align: right;
+}
+
+.footer-inner a {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 @media (max-width: 940px) {
